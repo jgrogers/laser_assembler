@@ -38,6 +38,11 @@ generate_messages(
   std_msgs
   sensor_msgs
 )
+
+catkin_package(
+  CATKIN_DEPENDS ${RUN_DEPENDS}
+)
+
 add_executable(laser_scan_assembler_srv src/laser_scan_assembler_srv.cpp)
 target_link_libraries(laser_scan_assembler_srv 
   ${catkin_LIBRARIES}
